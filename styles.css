@@ -1,59 +1,63 @@
+@charset "UTF-8";
 html, body {
   height: 100%;
   margin: 0;
+  /*Essa formatação foi aplicada para melhorar o controle do layout da página.
+  Utilizando o height: 100%, o conteúdo sempre ocupurá 100% da tela disponível;
+  e a margin: 0 para remover a margem padrão*/
 }
 
 main {
   margin: 70px;
+  padding: 0px;
 }
-main .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-article {
-  text-align: justify;
-  text-indent: 1cm;
+main .introdução {
+  text-align: justify; /*Para deixar o texto justificado*/
+  text-indent: 1cm; /*Para dar um espaço antes do texto*/
 }
 
 body {
-  background-color: lavenderblush;
+  background: linear-gradient(to bottom, #fffaf0, rgb(255, 240, 245), rgb(205, 160, 235), rgb(237, 109, 201));
+  /*Para deixar o background gradiente com quatro cores,começando de baixo para cima*/
+  background-size: cover; /*Para indicar que o gradiente cubra toda a área vísivel*/
+  background-attachment: fixed; /*Faz com que o background não se mova*/
+  background-repeat: no-repeat; /*Faz com que o gradiente não repita cores*/
+  font-size: larger; /*Altera o tamanho das fontes*/
 }
 body h1, body h2 {
-  color: rgb(120, 166, 75);
+  color: #db7093; /*Estabele a cor dos dois títulos*/
 }
 
 img {
-  width: 250px;
-  border-radius: 200px;
+  width: 250px; /*Formata a imagem para esse parâmetro*/
+  border-radius: 200px; /*Faz com que as bordas da imagem fiquem arrendondadas*/
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: none; /*Altera os marcadores de uma lista, neste caso retira todos eles*/
   margin: 0;
   padding: 0;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /*Remove o sublinhado padrão*/
 }
 
 .fa-youtube {
-  color: #FF0000;
+  color: #FF0000; /*Cor oficial do ícone do youtube*/
 }
 
 .fa-spotify {
-  color: #1DB954;
+  color: #1DB954; /*Cor oficial do ícone do spotify*/
 }
 
 .fa-goodreads-g {
-  color: #382110;
+  color: #382110; /*Cor oficial do ícone do goodreads*/
+}
+
+.fa-book-open {
+  color: midnightblue;
+  /*Cor escolhida para o ícone de livro aberto*/
 }
 
 footer {
