@@ -1,0 +1,71 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  margin: 70px;
+}
+main .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+article {
+  text-align: justify;
+  text-indent: 1cm;
+}
+
+body {
+  background-color: lavenderblush;
+}
+body h1, body h2 {
+  color: rgb(120, 166, 75);
+}
+
+img {
+  width: 250px;
+  border-radius: 200px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fa-youtube {
+  color: #FF0000;
+}
+
+.fa-spotify {
+  color: #1DB954;
+}
+
+.fa-goodreads-g {
+  color: #382110;
+}
+
+footer {
+  background-color: purple;
+  height: 67px;
+  top: 500px;
+  box-sizing: border-box;
+  margin: 0;
+}
+footer p {
+  text-align: center;
+  margin: 0;
+  padding: 25px;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
