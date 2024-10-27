@@ -1,19 +1,10 @@
+
 html, body {
     height: 100%;
     margin: 0;
     /*Essa formatação foi aplicada para melhorar o controle do layout da página.
     Utilizando o height: 100%, o conteúdo sempre ocupurá 100% da tela disponível;
     e a margin: 0 para remover a margem padrão*/
-}
-
-main {
-    margin: 70px;
-    padding: 0px;
-
-    .introdução{
-        text-align: justify; /*Para deixar o texto justificado*/
-        text-indent: 1cm; /*Para dar um espaço antes do texto*/
-    }
 }
 
 body {
@@ -23,15 +14,27 @@ body {
     background-attachment: fixed; /*Faz com que o background não se mova*/
     background-repeat: no-repeat; /*Faz com que o gradiente não repita cores*/
     font-size: larger; /*Altera o tamanho das fontes*/
+}
 
-    h1, h2 {
-        color: #db7093; /*Estabele a cor dos dois títulos*/
-    }
+main {
+    margin: 70px;
+    min-height: 90vh;
+    /* min-height no main é equalizar o body do footer,
+    assim, estabelecendo o height mininum como 90, o footer irá complementá-lo aos 10 vh*/
 }
 
 img {
     width: 250px; /*Formata a imagem para esse parâmetro*/
     border-radius: 200px; /*Faz com que as bordas da imagem fiquem arrendondadas*/
+}
+
+h1, h2 {
+    color: #db7093; /*Estabele a cor dos dois títulos*/
+}
+
+.introdução{
+    text-align: justify; /*Para deixar o texto justificado*/
+    text-indent: 2em; /*Para dar um espaço antes do texto*/
 }
 
 ul {
@@ -62,18 +65,51 @@ a {
 }
 
 footer {
-
     background-color: purple;
-    height: 67px;
-    top: 500px;
     box-sizing: border-box;
     margin: 0;
-
+    padding: 1.5625rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     p {
         text-align: center;
-        margin: 0;
-        padding: 25px;
+        margin: 0;       
         color: white;            
     }
 }
 
+
+    /*margin é irmão com irmão
+    padding é pai para filho*/
+
+    /*uma forma de manter o footer sempre no final é conhecida como sticky footer:
+        
+    body{
+        display:flex;
+        flex-direction: column;
+    }
+
+    main{
+        flex:1;
+    }
+
+    Isto faz com que o body do documento em um contêiner flexível que organiza seus filhos (main e footer) em uma coluna.
+    No main, é defindo para expandir e contrair conforme necessário para ocupar o espaço restante no contêiner flexível*/
+
+    /*outra forma de manter o footer no final é declarar os seguintes elementos:
+    
+    main{
+        min-height: 90vh;
+    }
+
+    footer{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    Assim, estabelecendo os 90vh no main, os 10vh do footer vai sempre se complementar. E o outro deixa o footer sempre alinhado ao centro e flexível*/
